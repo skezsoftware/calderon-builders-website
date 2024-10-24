@@ -7,7 +7,7 @@ import HomeRemodel from "../../assets/home-remodel.png";
 
 export default function CarouselImages() {
   return (
-    <Carousel>
+    <Carousel className="carousel-front">
       <Carousel.Item>
         <ExampleCarouselImage src={WorkersWalking} text="First slide" />
         <Carousel.Caption>

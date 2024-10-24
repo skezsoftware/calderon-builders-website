@@ -1,3 +1,7 @@
+.carousel-front {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); 
+}
+
 #carousel-image {
   height: 70vh;
   @media screen and (max-width: 768px) {
@@ -6,20 +10,13 @@
 }
 .get-in-touch-background {
   background-color: rgb(248,249,250);
-}
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* More pronounced shadow */}
 
 /* TESTIMONAIALS */
-/* .tesimonial-carousel-container { */
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 2rem;
-  max-width: 1280px;
-} */
-/* .tesimonial-carousel {
-  max-width: 1280px;
-} */
+.tesimonial-carousel-container {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* More pronounced shadow */
+}
+
 .testimonial-text {
   font-size: 1.4rem;
   position: absolute;
