@@ -1,4 +1,5 @@
 import Workers from "../../assets/workers.png";
+import { useNavigate } from "react-router-dom";
 import "./home.css";
 
 export default function GetInTouch() {

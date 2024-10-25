@@ -14,6 +14,7 @@ const Services = () => {
           </div>
           <div >
             <h3 className="fs-2 text-body-emphasis">Home Remodeling</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -30,6 +31,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Kitchen Remodeling</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -46,6 +48,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Roofing</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -62,6 +65,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Interior & Exterior Painting</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -78,6 +82,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Flooring Installation</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -94,6 +99,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Electrical & Plumbing Services</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -110,6 +116,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Concrete & Masonry Work</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -126,6 +133,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Framing & Carpentry</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -142,6 +150,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Siding & Window Installation</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -158,6 +167,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">HVAC Installation & Repair</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep
@@ -174,6 +184,7 @@ const Services = () => {
           </div>
           <div>
             <h3 className="fs-2 text-body-emphasis">Welding Services</h3>
+            <hr className="line-across-service"/>
             <p>
               Paragraph of text beneath the heading to explain the heading.
               We'll add onto it with another sentence and probably just keep

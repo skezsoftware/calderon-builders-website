@@ -7,13 +7,14 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Services from "./components/services/Services";
 import Projects from "./components/projects/Projects";
+import OppositeContentTimeline from "./components/about/About";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      
       <HashRouter>
       <Header />
       <Routes>
@@ -27,14 +28,14 @@ function App() {
         />
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
-        {/* <Route path="/dinner" element={<DinnerMenu />} />
-        <Route path="/lunch" element={<LunchMenu />} />
-        <Route path="/orderonline" element={<OrderOnline />} />
-        <Route path="/catering" element={<Catering />} /> */}
+        <Route path="/about" element={<OppositeContentTimeline />} />
+        {/* <Route path="/orderonline" element={<OrderOnline />} />
+        <Route path="/catering" element={<Catering />} />  */}
       </Routes>
       {/* <ScrollToTop /> */}
       {/* <SimpleBottomNavigation /> */}
     </HashRouter>
+    <Footer />
     </>
   );
 }
