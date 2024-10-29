@@ -1,5 +1,6 @@
 .carousel-front {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); 
+  margin-top: 1em;
 }
 
 #carousel-image {

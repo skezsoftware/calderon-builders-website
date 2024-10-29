@@ -6,85 +6,58 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import { motion } from 'framer-motion';
 import AboutPageHeader from './AboutPageHeader';
 import './about.css';
 
 export default function OppositeContentTimeline() {
   return (
-    <>
-    <AboutPageHeader/>
-    <Timeline position="alternate">
-      <TimelineItem sx={{ marginBottom: '2em'}}>
-        <TimelineOppositeContent color="text.secondary" id='timeline-year'>
-          1974
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{ margin: '20px'}}>
-          <TimelineDot sx={{ borderColor: '#2a52f7', backgroundColor: '#F8F9FA'}}/>
-          <TimelineConnector sx={{ backgroundColor: '#F8F9FA'}}/>
-        </TimelineSeparator>
-        <TimelineContent className='timeline-description'>Company found Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cumque vero doloribus itaque provident quas nostrum molestiae earum, eveniet perspiciatis eos inventore aspernatur labore ex voluptatem mollitia quae cupiditate praesentium?</TimelineContent>
-      </TimelineItem>
-      <TimelineItem sx={{ marginBottom: '2em'}}>
-        <TimelineOppositeContent color="text.secondary" id='timeline-year'>
-          1984
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{ margin: '20px'}}>
-          <TimelineDot sx={{ borderColor: '#e10020', backgroundColor: '#F8F9FA'}}/>
-          <TimelineConnector sx={{ backgroundColor: '#F8F9FA'}}/>
-        </TimelineSeparator>
-        <TimelineContent  className='timeline-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ea ipsa voluptatem eligendi quasi animi quam beatae ipsam fugiat veritatis nam, accusamus ullam asperiores vel nostrum consectetur soluta autem illum!</TimelineContent>
-      </TimelineItem>
-      <TimelineItem sx={{ marginBottom: '2em'}}>
-        <TimelineOppositeContent color="text.secondary" id='timeline-year'>
-          1994
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{ margin: '20px'}}>
-          <TimelineDot sx={{ borderColor: '#2a52f7', backgroundColor: '#F8F9FA'}}/>
-          <TimelineConnector sx={{ backgroundColor: '#F8F9FA'}}/>
-        </TimelineSeparator>
-        <TimelineContent  className='timeline-description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos repellendus, ducimus officia vel aut esse voluptatum hic quasi accusantium ex illo fuga est officiis quisquam, deserunt rerum excepturi sed sequi.</TimelineContent>
-      </TimelineItem>
-      <TimelineItem sx={{ marginBottom: '2em'}}>
-        <TimelineOppositeContent color="text.secondary" id='timeline-year'>
-          2004
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{ margin: '20px'}}>
-          <TimelineDot sx={{ borderColor: '#e10020', backgroundColor: '#F8F9FA'}}/>
-          <TimelineConnector sx={{ backgroundColor: '#F8F9FA'}}/>
-        </TimelineSeparator>
-        <TimelineContent  className='timeline-description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo eum, aut corrupti est eligendi cupiditate nesciunt ipsam quis! Accusantium alias laudantium quas nulla pariatur possimus, deserunt esse sapiente totam eos!</TimelineContent>
-      </TimelineItem>
-      <TimelineItem sx={{ marginBottom: '2em'}}>
-        <TimelineOppositeContent color="text.secondary" id='timeline-year'>
-          2014
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{ margin: '20px'}}>
-          <TimelineDot sx={{ borderColor: '#2a52f7', backgroundColor: '#F8F9FA'}}/>
-          <TimelineConnector sx={{ backgroundColor: '#F8F9FA'}}/>
-        </TimelineSeparator>
-        <TimelineContent  className='timeline-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, corporis? Fugiat quia possimus hic reiciendis! Corporis aspernatur accusantium, cupiditate facere repellat molestias. Ex qui, fuga veritatis soluta eum aliquam reprehenderit.</TimelineContent>
-      </TimelineItem>
-      <TimelineItem sx={{ marginBottom: '2em'}}>
-        <TimelineOppositeContent color="text.secondary" id='timeline-year'>
-          2018
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{ margin: '20px'}}>
-          <TimelineDot sx={{ borderColor: '#e10020', backgroundColor: '#F8F9FA'}}/>
-          <TimelineConnector sx={{ backgroundColor: '#F8F9FA'}}/>
-        </TimelineSeparator>
-        <TimelineContent  className='timeline-description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam aliquam libero ipsa. Nisi corporis, cupiditate autem dicta fugiat veniam dolores quae iure quas ad debitis fuga, impedit numquam atque mollitia.</TimelineContent>
-      </TimelineItem>
-      <TimelineItem sx={{ marginBottom: '2em'}}>
-        <TimelineOppositeContent color="text.secondary" id='timeline-year'>
-          2024
-        </TimelineOppositeContent>
-        <TimelineSeparator sx={{ margin: '20px'}}>
-          <TimelineDot sx={{ borderColor: '#2a52f7', backgroundColor: '#F8F9FA'}}/>
-          <TimelineConnector sx={{ backgroundColor: '#F8F9FA'}}/>
-        </TimelineSeparator>
-        <TimelineContent className='timeline-description'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ab natus totam adipisci facere nulla distinctio inventore perspiciatis saepe, voluptatem voluptatum nemo laboriosam fugit? Nulla aut porro quas praesentium temporibus.</TimelineContent>
-      </TimelineItem>
-    </Timeline>
-    </>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <AboutPageHeader />
+      <div className="timeline-container">
+        <Timeline position="alternate" className='whole-timeline'>
+          {timelineData.map((item, index) => (
+            <TimelineItem key={item.year} className='timeline-item'>
+              <TimelineOppositeContent className='timeline-year'>
+                {item.year}
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot className={`timeline-dot ${index % 2 === 0 ? 'blue-dot' : 'red-dot'}`} />
+                <TimelineConnector className='timeline-connector' />
+              </TimelineSeparator>
+              <TimelineContent className='timeline-description'>
+                <motion.div 
+                  className='timeline-content-wrapper'
+                  initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.2 }}
+                >
+                  <h3 className='timeline-title'>{item.title}</h3>
+                  <p>{item.description}</p>
+                </motion.div>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </div>
+    </motion.div>
   );
 }
+
+const timelineData = [
+  {
+    year: '1974',
+    title: 'Company Founded',
+    description: 'Our journey began with a vision to revolutionize the industry...'
+  },
+  {
+    year: '1984',
+    title: 'International Expansion',
+    description: 'We took our first steps into international markets...'
+  },
+  // Add more timeline items with real content
+];

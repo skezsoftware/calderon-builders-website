@@ -1,22 +1,34 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./about.css";
 
 const AboutPageHeader = () => {
   return (
-    <>
-      <div className="px-4 py-4 my-2 text-center">
-        <i className="bi bi-clock-history clockIcon"></i>
-        <h1 className="display-5 fw-bold text-body-emphasis">Going Back in Time</h1>
-        <div className="col-lg-6 mx-auto">
-          <p className="lead mb-4 header-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-            itaque numquam aperiam neque est harum totam nostrum distinctio,
-            delectus officia. Minus non incidunt atque sunt alias harum eaque
-            earum fugiat.
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="about-header-container"
+    >
+      <div className="about-header-content">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="icon-container"
+        >
+          <i className="bi bi-clock-history"></i>
+        </motion.div>
+        <h1 className="about-title">Going Back in Time</h1>
+        <div className="about-text-container">
+          <p className="about-description">
+            Explore our journey through the years as we've grown, innovated, 
+            and shaped the future of technology. Each milestone tells a story 
+            of dedication, creativity, and breakthrough achievements.
           </p>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

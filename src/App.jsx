@@ -8,8 +8,9 @@ import Home from "./components/home/Home";
 import Services from "./components/services/Services";
 import Projects from "./components/projects/Projects";
 import OppositeContentTimeline from "./components/about/About";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import Footer from "./components/footer/Footer";
-
+import Contact from "./components/contact/Contact";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -29,13 +30,15 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<OppositeContentTimeline />} />
+        <Route path="/contact" element={<Contact />} />
         {/* <Route path="/orderonline" element={<OrderOnline />} />
         <Route path="/catering" element={<Catering />} />  */}
       </Routes>
       {/* <ScrollToTop /> */}
       {/* <SimpleBottomNavigation /> */}
-    </HashRouter>
+    <ScrollToTop />
     <Footer />
+    </HashRouter>
     </>
   );
 }

@@ -1,3 +1,10 @@
-.footer-container {
+
+.container-fluid {
+    bottom: 0;
     width: 100%;
+    background-color: #BFA6A2;
+    text-align: center;
+    position: static;
 }
+
+
